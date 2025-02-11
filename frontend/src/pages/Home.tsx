@@ -16,6 +16,7 @@ const Home = () => {
     <div className="container">
       <Header />
       <p className="message">{message}</p>
+      <div></div>
     </div>
   );
 };
