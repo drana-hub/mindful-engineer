@@ -1,0 +1,29 @@
+name: Deploy React App to AWS EC2
+
+on:
+  push:
+    branches:
+      - main  # Runs only when code is pushed to the main branch
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Deploy to AWS EC2
+        uses: appleboy/ssh-action@v0.1.6
+        with:
+          host: ${{ secrets.AWS_HOST }}
+          username: ubuntu
+          key: ${{ secrets.AWS_SSH_KEY }}
+          script: |
+            cd /var/www/mindful-engineer
+            git pull origin master
+            cd frontend
+            npm install
+            npm run build
+            sudo systemctl restart nginx
+
