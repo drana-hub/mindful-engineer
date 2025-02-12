@@ -1,0 +1,39 @@
+/* Ensure full-page layout */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Make #root take full height */
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Make the main app container fill available space */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+/* Make content expand so footer stays at the bottom */
+/* .content {
+  flex-grow: 1;
+  padding-bottom: 20px;
+} */
+
+/* Style the footer to always stay at the bottom */
+footer {
+  background:grey;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}

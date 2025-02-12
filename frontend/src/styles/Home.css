@@ -1,15 +1,112 @@
-.container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    background-color: #f5f5f5;
+/* Home.css */
+.home-container {
+  position: relative;
+  width: 100%;
+  min-height: 100vh; /* Ensures full height on all devices */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url("/assets/mindfulness-bg.jpg") no-repeat center center/cover;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Overlay for better text readability */
+.background-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.content {
+  position: relative;
+  text-align: center;
+  color: white;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
   }
-  
-  .message {
-    margin-top: 20px;
-    font-size: 18px;
-    color: #333;
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
+}
+
+/* Responsive Title */
+.title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #f8f8f8;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: #dcdcdc;
+}
+
+/* Button Container */
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap; /* Ensures buttons stack on small screens */
+  margin-top: 20px;
+}
+
+/* Responsive Buttons */
+.primary-button, .secondary-button {
+  padding: 12px 24px;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  min-width: 200px; /* Ensures better touch interaction */
+}
+
+.primary-button {
+  background: linear-gradient(to right, #6200ea, #9c27b0);
+  color: white;
+}
+
+.primary-button:hover {
+  background: linear-gradient(to right, #9c27b0, #6200ea);
+}
+
+.secondary-button {
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+}
+
+.secondary-button:hover {
+  background: white;
+  color: #6200ea;
+}
+
+/* 🔹 RESPONSIVE DESIGN FOR MOBILE & SMALL SCREENS */
+@media screen and (max-width: 768px) {
+  .title {
+    font-size: 2rem; /* Reduce title size */
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .button-container {
+    flex-direction: column; /* Stack buttons vertically */
+  }
+
+  .primary-button, .secondary-button {
+    min-width: 100%; /* Full width buttons */
+    font-size: 1rem;
+  }
+}
