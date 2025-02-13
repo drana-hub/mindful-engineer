@@ -2,3 +2,7 @@
     background: url("/assets/mindfulness-bg.jpg") no-repeat center center/cover;
     min-height: 100vh;
 }
+
+.gallery-page p {
+    color: sienna;
+}

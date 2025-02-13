@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { useLanguage } from "../context/LanguageContext";
 import LanguageSwitcher from "../components/LanguageSwitcher";
 import "../styles/Home.css";
+// import Chatbot from "../components/Chatbot";
 
 function Home() {
   const { t } = useLanguage();
@@ -13,6 +14,7 @@ function Home() {
 
       {/* Content */}
       <div className="content">
+        
         <LanguageSwitcher />
 
         <h1 className="title">{t("welcome")}</h1>

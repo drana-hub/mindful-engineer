@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom";
 import "../styles/Header.css";
+import Chatbot from "./Chatbot";
 
 function Header() {
   return (
@@ -18,6 +19,7 @@ function Header() {
           About
         </NavLink>
       </nav>
+      <Chatbot />
     </header>
   );
 }

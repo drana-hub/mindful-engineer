@@ -13,7 +13,7 @@ function App() {
     <LanguageProvider>
       <Router>
       <div className="app-container">
-          <Header />
+          <Header /> 
           <div className="content">
             <Routes>
               <Route path="/" element={<Home />} />

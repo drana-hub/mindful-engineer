@@ -8,13 +8,12 @@ const photos = [
   function Gallery() {
     return (
       <div className='gallery-page' style={{ textAlign: "center", padding: "20px" }}>
-        <h1>My Photo Gallery</h1>
-        <div style={{ display: "flex", justifyContent: "center", flexWrap: "wrap" }}>
+        <div>
           {photos.map((photo, index) => (
-            <div key={index} style={{ margin: "10px", maxWidth: "300px" }}>
+            <div key={index} style={{ margin: "auto", maxWidth: "400px" }}>
               {/* <img src={photo.src} alt={photo.title} width="100%" /> */}
-              <h3>{photo.title}</h3>
-              <p>{photo.description}</p>
+              {/* <h3>{photo.title}</h3> */}
+              <p style={{marginTop: "40px"}}>{photo.description}</p>
             </div>
           ))}
         </div>
