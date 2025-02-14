@@ -38,7 +38,7 @@ export default function Chatbot() {
         recentMessages.unshift({
           role: "system",
           content:
-            "You are a chatbot that helps users with mindfulness and meditation. Also remember, that you are a representative of Divyansh while he is not here.",
+            "You are a chatbot that helps users with mindfulness and help them living in present.",
         });
       }
 

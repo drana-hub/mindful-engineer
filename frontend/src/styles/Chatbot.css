@@ -1,9 +1,18 @@
 /* Ensures chatbot stays in the header */
 .chatbot-wrapper {
   position: fixed;
-  top: 5px;
+  top: 3px;
   right: 20px;
   z-index: 9999;
+}
+
+/* 🌍 Mobile Adjustment: Move Chat Icon to Bottom-Right */
+@media (max-width: 768px) {
+  .chatbot-wrapper {
+    top: auto; /* ✅ Remove top positioning */
+    bottom: 14px; /* ✅ Move to bottom */
+    right: 14px; /* ✅ Keep it on the right */
+  }
 }
 
 /* Chat toggle button */
@@ -22,7 +31,7 @@
   position: fixed;
   top: 60px;
   right: 20px;
-  width: 360px;
+  width: 30%;
   background: white;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -30,6 +39,26 @@
   display: flex;
   flex-direction: column;
   z-index: 10000;
+}
+
+/* 🌍 Mobile Adjustment: Move Chat Icon to Bottom-Right */
+@media (max-width: 768px) {
+/* Chat container (appears over everything) */
+.chat-container {
+  position: fixed;
+  top: auto;
+  height: 75%;
+  bottom: 70px;
+  right: 20px;
+  width: 90%;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  z-index: 10000;
+}
 }
 
 /* Chat header */
