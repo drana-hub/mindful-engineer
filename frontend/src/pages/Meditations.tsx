@@ -1,5 +1,5 @@
 import BreathingExercise from "../components/BreathingExercise";
-import MeditationTimer from "../components/MeditationTimer";
+// import MeditationTimer from "../components/MeditationTimer";
 import '../styles/Meditations.css'
 // import { useLanguage } from "../context/LanguageContext";
 
@@ -12,7 +12,7 @@ function Meditations() {
       <p>{t("meditationSubtitle")}</p> */}
 
       <BreathingExercise />
-      <MeditationTimer />
+      {/* <MeditationTimer /> */}
 
       {/* <h3>{t("reflectionQuestion")}</h3>
       <p>{t("reflectionDescription")}</p> */}
