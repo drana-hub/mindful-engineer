@@ -24,9 +24,9 @@ function Home() {
           <Link to="/meditations">
             <button className="primary-button">{t("meditationBtn")}</button>
           </Link>
-          <Link to="/gallery">
+          {/* <Link to="/gallery">
             <button className="secondary-button">{t("galleryBtn")}</button>
-          </Link>
+          </Link> */}
         </div>
       </div>
     </div>

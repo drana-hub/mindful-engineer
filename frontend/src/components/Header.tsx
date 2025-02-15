@@ -10,7 +10,7 @@ function Header() {
           Home
         </NavLink>
         <NavLink to="/meditations" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>
-          Meditations
+          Meditation
         </NavLink>
         <NavLink to="/gallery" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>
           Gallery
